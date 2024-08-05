@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminstrator</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <section id="login">
+        <h1>SAMARQAND VILOYATI YOSHLAR TEXNOPARKI</h1>
+        <form align="center">
+            <div>
+                <!-- <label for="loginp">Login</label> -->
+                <input type="text" id="loginp" placeholder="login"><!-- required -->
+            </div>
+            <br>
+            <div>
+                <!-- <label for="parol">Parol</label> -->
+                <input type="password" id="parol" placeholder="parol"><!-- required -->
+            </div>
+            <br>
+            <a onclick="alert('Bozorov Suhrobga yoki Sanatov Shaxriyorga murojaat qiling')">parolni unutdingizmi?</a>
+            <button type="submit">kirish</button>
+        </form>
+    </section>
+
+    <section id="main">
+
+        <div id="name">
+            <h1>SAMARQAND VILOYATI YOSHLAR TEXNOPARKI</h1>  
+        </div>
+        <div class="hr"></div>
+        <div>
+            
+            <h2>&#x1F4DD O'quvchilar ro'yxati</h2>
+            <input type="search" placeholder="qidirish..." oninput="mySearch()" id="sEl">
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>To'liq ism</th>
+                    <th>kurs</th>
+                    <th>dars kunlari</th>
+                    <th>dars soati</th>
+                    <th>telefon raqami</th>
+                    <th>manzili</th>
+                    <th>to'lov kuni</th>
+                    <th>to'langanmi</th>
+                    <th>sozlamalar</th>
+                </tr>
+                
+            </thead>
+
+            <tbody>
+                
+                <tr id="add-tr">
+
+                    <td contenteditable="true" id="fullname"></td>
+
+                    <td id="course">
+                        <select>
+                            <option value="frontend">frontend</option>
+                            <option value="backend">backend</option>
+                            <option value="kompyuter savodxonligi">kompyuter savodxonligi</option>
+                            <option value="3D max">3D max</option>
+                        </select>
+                    </td>
+
+                    <td id="lesson-date">
+                        <select>
+                            <option value="du-chor-juma">du-chor-juma</option>
+                            <option value="sesh-pay-shan">sesh-pay-shan</option>
+                        </select>
+                    </td>
+
+                    <td id="lesson-hour">
+                        <select>
+                            <option value="9:00 - 11:00">9:00 - 11:00</option>
+                            <option value="14:00 - 16:00">14:00 - 16:00</option>
+                        </select>
+                    </td>
+
+                    <td id="telephone"><input type="tel" id="space" value="+998 " oninput="addSpace()"></td>
+                    <td id="address" contenteditable="true"></td>
+                    <td contenteditable="true" id="pay-date"></td>
+
+                    <td id="payed">
+                        <select>
+                            <option value="ha">ha</option>
+                            <option value="yo'q">yo'q</option>
+                        </select>
+                    </td>
+
+                    <td id="btns"><button class="add-btn" onclick="addAll()">qo'shish</button></td>
+                
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
